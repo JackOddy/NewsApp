@@ -2,11 +2,11 @@ import React from 'react';
 import { Provider } from 'react-redux';
 
 import store from './src/Store';
-import Viewport from './src/Viewport';
+import App from './src/Routes';
 
 export default () => (
     <Provider store={store}>
-      <Viewport/>
+      <App />
     </Provider>
 );
 

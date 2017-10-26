@@ -1,13 +1,14 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { composeWithDevTools } from 'remote-redux-devtools';
 import thunk from 'redux-thunk';
 
-import number from '../Reducers/counterReducer';
+import news from '../Reducers/newsReducer';
 
 const reducer = combineReducers({
-  number,
+  news,
 });
 
 export default createStore(
   reducer,
-  compose(applyMiddleware(thunk))
+  composeWithDevTools(applyMiddleware(thunk))
 );
