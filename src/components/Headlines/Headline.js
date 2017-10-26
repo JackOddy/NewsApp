@@ -1,9 +1,11 @@
 import React from 'react';
 
-import { HeadlineContainer, SmlTitle } from './Headline.styles';
+import { HeadlineContainer, SmlTitle, HeadlineImage, Body} from './Headline.styles';
 
-export default ({title, description}) => (
+export default ({title, description, urlToImage}) => (
   <HeadlineContainer>
     <SmlTitle>{title}</SmlTitle>
+    <HeadlineImage source={{uri: urlToImage}} />
+    <Body>{description}</Body>
   </HeadlineContainer>
 );

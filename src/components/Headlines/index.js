@@ -4,21 +4,20 @@ import { connect } from 'react-redux';
 import {Page, Title, Row} from './Headline.styles.js'
 import Headline from './Headline';
 
-const Headlines = ({articles, source}) => (
-    <Page>
+const Headlines = ({color, articles, source}) => (
+    <Page color={color}>
     <Title> {source.name} </Title>
     {
       articles
         .map(headline =>
-             <Headline{...headline} key={headline.description} />
+             <Headline {...headline} key={headline.description} />
             )
     }
     </Page>
 );
 
 const mapStateToProps = state => ({
-  articles: state.news.headlines.articles,
-  source: state.news.headlines.source
+  ...state.news.headlines,
 });
 
 const mapDispatchToProps = {

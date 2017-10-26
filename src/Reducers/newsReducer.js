@@ -20,6 +20,7 @@ export default (state = INIT, {type, ...payload}) => {
       headlines: {
         source: payload.source,
         articles: payload.articles,
+        color: payload.color,
       }
     };
   default:

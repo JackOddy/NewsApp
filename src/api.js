@@ -14,7 +14,7 @@ export default (() => {
     sources: () => client()
       .get('https://newsapi.org/v1/sources', {
         params: {
-          language: 'en'
+          language: 'de'
         }
       }),
     headlines: source => client()
